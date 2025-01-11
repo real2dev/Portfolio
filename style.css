@@ -239,7 +239,7 @@ p {
     content: '';
     position: absolute;
     top: 0;
-    width: 20%; /* Adjust width of the fade areas */
+    width: 35%; /* Adjust width of the fade areas */
     height: 100%;
     z-index: 1;
 }

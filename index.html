@@ -16,13 +16,46 @@
 
     <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Basic CSS to ensure particles background works and text is visible */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Inter', sans-serif;
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .Main {
+            z-index: 2;  /* Make sure content stays on top of particles */
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        a {
+            color: #FF6347; /* Example color */
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
    <div class="Main">
         <h1>hello, i'm real 👋</h1>
         <p>
-            i'm <a style="color: whitesmoke;">real</a>, a roblox scripter with ~5 years of experience. i've tried messing around with other languages, however lua has proven to be my favorite. i really enjoy working on all kinds of projects, and i don't usually do small commissions (<3k robux or $40 usd).
+            i'm <a href="#" style="color: whitesmoke;">real</a>, a roblox scripter with ~5 years of experience. i've tried messing around with other languages, however lua has proven to be my favorite. i really enjoy working on all kinds of projects, and i don't usually do small commissions (<3k robux or $40 usd).
             if you want to reach out to me, use any of the communication methods linked below!
         </p>
    </div>

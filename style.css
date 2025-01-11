@@ -46,7 +46,7 @@ p {
     color: #8f8f8f;
     display: block; /* Hide elements */
     font-weight: 550;
-    max-width: 100%;
+    max-width: 70%;
 }
 
 /* Main content styling */
@@ -278,9 +278,9 @@ p {
 /* Infinite scrolling animation */
 @keyframes scroll {
     0% {
-        transform: translateX(100%);
+        transform: translateX(30%);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-30%);
     }
 }

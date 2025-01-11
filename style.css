@@ -1,16 +1,15 @@
 * {
-    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="%23FFFFFF" stroke="%23FFFFFF" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>')
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="%23FFFFFF" stroke="%23FFFFFF" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
 }
 
 *:hover {
-    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="%23FFFFFF" stroke="%23FFFFFF" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>')
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="%23FFFFFF" stroke="%23FFFFFF" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
 }
 
 body {
     background-color: #090909;
-    font-family:"DM Mono";
-    font-style:normal;
-    font-display:swap;
+    font-family: "DM Mono", monospace;
+    font-style: normal;
     color: white;
     margin: 0;
 }
@@ -29,79 +28,67 @@ body {
 }
 
 h1 {
-    font-size:2.25rem;
-    line-height:2.5rem;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
     font-weight: 500;
 }
+
 h2, h3 {
-    font-size:1.5rem;
-    line-height:2rem;
-    font-display: none;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    display: none; /* Hide elements */
     font-weight: 500;
 }
+
 p {
     color: #8f8f8f;
-    font-display: none;
+    display: none; /* Hide elements */
     font-weight: 400;
     max-width: 100%;
 }
 
 .Main {
-    padding-left: max(7vw, 20px);
-    padding-right: max(7vw, 20px);
-    padding-top: 7vh;
-    padding-bottom: 7vh;
+    padding: 7vh max(7vw, 20px);
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .ProjectContainer {
     display: block;
-    border-style: none;
     border-radius: 15px;
     background-color: #171717;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    padding-left: 13px;
-    padding-right: 13px;
-    align-items: center;
-    gap: 5px;
+    padding: 2px 13px;
     text-decoration: none;
-    max-width: 100%;
     color: #a3a3a3;
-    font-family: "DM Mono";
-    font-style: normal;
+    font-family: "DM Mono", monospace;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    font-size: 1rem; 
+    font-size: 1rem;
 }
 
 .MusicButton, .LanguageContainer, .SocialButton {
-    display: block;
-    border-style: none;
+    display: flex;
     border-radius: 15px;
     background-color: #171717;
-    padding-left: 13px;
-    padding-right: 13px;
-    display: flex;
+    padding: 0 13px;
     align-items: center;
     gap: 5px;
     text-decoration: none;
     color: #a3a3a3;
-    font-family: "DM Mono";
-    font-style: normal;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    font-family: "DM Mono", monospace;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .SocialButton {
     height: 25px;
 }
+
 .MusicButton, .LanguageContainer {
     height: 30px;
     margin-bottom: 10px;
 }
 
 .MusicButton:hover, .LanguageContainer:hover, .SocialButton:hover, .ProjectContainer:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -132,7 +119,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
 }
 
 .SocialIcon {
@@ -142,8 +129,7 @@ p {
 .Link {
     text-decoration: none;
     color: #a3a3a3;
-    font-family: "DM Mono";
-    font-style: normal;
+    font-family: "DM Mono", monospace;
     display: block;
 }
 
@@ -156,7 +142,6 @@ p {
 
 .JobContainer {
     display: block;
-    border-style: none;
     border-radius: 15px;
     background-color: #171717;
     padding: 15px;

@@ -37,8 +37,8 @@ h1 {
 h2, h3 {
     font-size: 1.5rem;
     line-height: 2rem;
-    display: none; /* Hide elements */
-    font-weight: 500;
+    display: block; /* Hide elements */
+    font-weight: 650;
 }
 
 /* Paragraph text */

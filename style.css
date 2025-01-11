@@ -5,7 +5,7 @@
 
 /* Body styling */
 body {
-    background-color: #000000;
+    background-color: #0000;
     font-family: "DM Mono", monospace;
     font-style: normal;
     color: white;
@@ -222,44 +222,4 @@ p {
 .GamesList li {
     color: #8f8f8f;
     margin: 5px 0;
-}
-
-.scrolling-container {
-    position: relative;
-    overflow: hidden;
-    width: 50%;
-    height: 50px; /* Adjust as needed */
-    background-color: #000; /* Optional */
-    display: flex;
-    align-items: center;
-}
-
-.scrolling-content {
-    display: flex;
-    animation: scroll 16s linear infinite;
-}
-
-.scroll-item {
-    display: flex;
-    align-items: center;
-    margin-right: 30px; /* Spacing between items */
-    white-space: nowrap;
-    color: white; /* Optional text color */
-    font-family: "Inter", sans-serif;
-}
-
-.scroll-item img {
-    width: 20px; /* Adjust icon size */
-    height: 20px;
-    margin-right: 10px; /* Spacing between icon and text */
-}
-
-/* Infinite scrolling animation */
-@keyframes scroll {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
 }

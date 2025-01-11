@@ -16,6 +16,36 @@
 
     <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Basic CSS to ensure particles background works and text is visible */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .Main {
+            z-index: 2;  /* Make sure content stays on top of particles */
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        a {
+            color: #FF6347; /* Example color */
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>

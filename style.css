@@ -227,7 +227,7 @@ p {
 .scrolling-container {
     position: relative;
     overflow: hidden;
-    width: 60%;
+    width: 50%;
     height: 50px; /* Adjust as needed */
     background-color: #000; /* Optional */
     display: flex;
@@ -236,7 +236,7 @@ p {
 
 .scrolling-content {
     display: flex;
-    animation: scroll 10s linear infinite;
+    animation: scroll 16s linear infinite;
 }
 
 .scroll-item {

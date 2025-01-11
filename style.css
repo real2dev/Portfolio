@@ -48,7 +48,7 @@ h2, h3 {
 /* Paragraph text */
 p {
     color: #8f8f8f;
-    display: none; /* Hide elements */
+    display: block; /* Hide elements */
     font-weight: 400;
     max-width: 100%;
     font-family: 'Inter', "DM Mono", monospace;

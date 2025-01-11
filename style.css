@@ -1,15 +1,12 @@
-/* Import the Inter font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,655;1,14..32,655&display=swap');
-
 /* General cursor styling */
 * {
-    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23FFFFFF" stroke-width="4" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), default;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23FFFFFF" stroke-width="4" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), default;
 }
 
 /* Body styling */
 body {
     background-color: #090909;
-    font-family: 'Inter', "DM Mono", monospace;
+    font-family: "DM Mono", monospace;
     font-style: normal;
     color: white;
     margin: 0;
@@ -35,7 +32,6 @@ h1 {
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 500;
-    font-family: 'Inter', "DM Mono", monospace;
 }
 
 h2, h3 {
@@ -49,15 +45,15 @@ h2, h3 {
 p {
     color: #8f8f8f;
     display: block; /* Hide elements */
-    font-weight: 550;
+    font-weight: 400;
     max-width: 100%;
-    font-family: 'Inter', "DM Mono", monospace;
 }
 
 /* Main content styling */
 .Main {
+    padding: 7vh max(7vw, 20px);
+    max-width: 1200px;
     margin: 0 auto;
-    font-family: 'Inter', "DM Mono", monospace;
 }
 
 /* Project Container */
@@ -68,7 +64,7 @@ p {
     padding: 2px 13px;
     text-decoration: none;
     color: #a3a3a3;
-    font-family: 'Inter', "DM Mono", monospace;
+    font-family: "DM Mono", monospace;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     font-size: 1rem;
 }
@@ -83,7 +79,7 @@ p {
     gap: 5px;
     text-decoration: none;
     color: #a3a3a3;
-    font-family: 'Inter', "DM Mono", monospace;
+    font-family: "DM Mono", monospace;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -143,7 +139,7 @@ p {
 .Link {
     text-decoration: none;
     color: #a3a3a3;
-    font-family: 'Inter', "DM Mono", monospace;
+    font-family: "DM Mono", monospace;
     display: block;
 }
 

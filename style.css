@@ -56,8 +56,6 @@ p {
 
 /* Main content styling */
 .Main {
-    padding: 7vh max(7vw, 20px);
-    max-width: 1200px;
     margin: 0 auto;
     font-family: 'Inter', "DM Mono", monospace;
 }

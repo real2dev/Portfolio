@@ -256,7 +256,7 @@ p {
 
 .scrolling-content {
     display: flex;
-    animation: scroll 10s linear infinite;
+    animation: scroll 16s linear infinite;
     z-index: 0;
 }
 

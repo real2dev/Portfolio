@@ -1,11 +1,13 @@
+/* General cursor styling */
 * {
-    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="48" viewBox="0 0 24 24"><path fill="%23FFFFFF" stroke="%23FFFFFF" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>');
+    cursor: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2248%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%23FFFFFF%22%20stroke-width%3D%222%22%20d%3D%22M5.5%203.21V20.8c0%20.45.54%20.67.85%20.35l4.86-4.86a.5.5%200%200%201%20.35-.15h6.87a.5.5%200%200%200%20.35-.85L6.35%202.85a.5.5%200%200%200-.85.35Z%22%3E%3C/path%3E%3C/svg%3E');
 }
 
 *:hover {
-    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="48" viewBox="0 0 24 24"><path fill="%23FFFFFF" stroke="%23FFFFFF" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>');
+    cursor: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2248%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%23FFFFFF%22%20stroke-width%3D%222%22%20d%3D%22M5.5%203.21V20.8c0%20.45.54%20.67.85%20.35l4.86-4.86a.5.5%200%200%201%20.35-.15h6.87a.5.5%200%200%200%20.35-.85L6.35%202.85a.5.5%200%200%200-.85.35Z%22%3E%3C/path%3E%3C/svg%3E');
 }
 
+/* Body styling */
 body {
     background-color: #090909;
     font-family: "DM Mono", monospace;
@@ -14,6 +16,7 @@ body {
     margin: 0;
 }
 
+/* Particle background container */
 #particles-js {
     position: fixed;
     top: 0;
@@ -23,10 +26,12 @@ body {
     z-index: -1;
 }
 
+/* Text selection */
 ::-moz-selection, ::selection {
     background-color: transparent;
 }
 
+/* Header styles */
 h1 {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -40,6 +45,7 @@ h2, h3 {
     font-weight: 500;
 }
 
+/* Paragraph text */
 p {
     color: #8f8f8f;
     display: none; /* Hide elements */
@@ -47,12 +53,14 @@ p {
     max-width: 100%;
 }
 
+/* Main content styling */
 .Main {
     padding: 7vh max(7vw, 20px);
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Project Container */
 .ProjectContainer {
     display: block;
     border-radius: 15px;
@@ -65,6 +73,7 @@ p {
     font-size: 1rem;
 }
 
+/* Button container styles */
 .MusicButton, .LanguageContainer, .SocialButton {
     display: flex;
     border-radius: 15px;
@@ -87,11 +96,13 @@ p {
     margin-bottom: 10px;
 }
 
+/* Hover effects */
 .MusicButton:hover, .LanguageContainer:hover, .SocialButton:hover, .ProjectContainer:hover {
     transform: scale(1.05);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Separator with animation */
 .Separator {
     height: 5px;
     background: linear-gradient(90deg, #ff6f61, #ffca28, #4caf50, #2196f3, #9c27b0);
@@ -114,6 +125,7 @@ p {
     }
 }
 
+/* Social row styling */
 .SocialRow {
     padding-bottom: 10px;
     display: flex;
@@ -122,10 +134,12 @@ p {
     gap: 10px;
 }
 
+/* Social icon styling */
 .SocialIcon {
     display: block;
 }
 
+/* Links styling */
 .Link {
     text-decoration: none;
     color: #a3a3a3;
@@ -133,6 +147,7 @@ p {
     display: block;
 }
 
+/* Job container grid */
 .JobsGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -140,6 +155,7 @@ p {
     width: 100%;
 }
 
+/* Individual job container styling */
 .JobContainer {
     display: block;
     border-radius: 15px;
@@ -155,6 +171,7 @@ p {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Role tag styling */
 .RoleTag {
     display: inline-block;
     background-color: #2d2d2d;
@@ -165,6 +182,7 @@ p {
     margin: 5px 0;
 }
 
+/* Status indicator container */
 .StatusIndicator {
     display: flex;
     align-items: center;
@@ -172,6 +190,7 @@ p {
     margin: 8px 0;
 }
 
+/* Status dot styling */
 .StatusDot {
     width: 8px;
     height: 8px;
@@ -179,6 +198,7 @@ p {
     display: inline-block;
 }
 
+/* Different status dot states */
 .StatusDot.active {
     background-color: #4caf50;
 }
@@ -191,11 +211,13 @@ p {
     background-color: #ffca28;
 }
 
+/* Status text styling */
 .StatusText {
     font-size: 0.8rem;
     color: #8f8f8f;
 }
 
+/* Game list styling */
 .GamesList {
     margin: 10px 0;
     padding-left: 20px;

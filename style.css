@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+* {
+    cursor: url(Icons/Cursor.png),auto;
+}
+
+*:hover {
+    cursor: url(Icons/Cursor.png),auto;
+}
+
 body {
     background-color: #090909;
     font-family:"DM Mono";
@@ -5,4 +15,210 @@ body {
     font-display:swap;
     color: white;
     margin: 0;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+::-moz-selection, ::selection {
+    background-color: transparent;
+}
+
+h1 {
+    font-size:2.25rem;
+    line-height:2.5rem;
+    font-weight: 500;
+}
+h2, h3 {
+    font-size:1.5rem;
+    line-height:2rem;
+    font-display: none;
+    font-weight: 500;
+}
+p {
+    color: #8f8f8f;
+    font-display: none;
+    font-weight: 400;
+    max-width: 100%;
+}
+
+.Main {
+    padding-left: max(7vw, 20px);
+    padding-right: max(7vw, 20px);
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ProjectContainer {
+    display: block;
+    border-style: none;
+    border-radius: 15px;
+    background-color: #171717;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 13px;
+    padding-right: 13px;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    max-width: 100%;
+    color: #a3a3a3;
+    font-family: "DM Mono";
+    font-style: normal;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1rem; 
+}
+
+.MusicButton, .LanguageContainer, .SocialButton {
+    display: block;
+    border-style: none;
+    border-radius: 15px;
+    background-color: #171717;
+    padding-left: 13px;
+    padding-right: 13px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #a3a3a3;
+    font-family: "DM Mono";
+    font-style: normal;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.SocialButton {
+    height: 25px;
+}
+.MusicButton, .LanguageContainer {
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.MusicButton:hover, .LanguageContainer:hover, .SocialButton:hover, .ProjectContainer:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.Separator {
+    height: 5px;
+    background: linear-gradient(90deg, #ff6f61, #ffca28, #4caf50, #2196f3, #9c27b0);
+    background-size: 300% 300%;
+    animation: SeperatorAnimation 10s ease infinite;
+    border: none;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+@keyframes SeperatorAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.SocialRow {
+    padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px; 
+}
+
+.SocialIcon {
+    display: block;
+}
+
+.Link {
+    text-decoration: none;
+    color: #a3a3a3;
+    font-family: "DM Mono";
+    font-style: normal;
+    display: block;
+}
+
+.JobsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.JobContainer {
+    display: block;
+    border-style: none;
+    border-radius: 15px;
+    background-color: #171717;
+    padding: 15px;
+    color: #a3a3a3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: fit-content;
+}
+
+.JobContainer:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.RoleTag {
+    display: inline-block;
+    background-color: #2d2d2d;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    color: #fcfcfc;
+    margin: 5px 0;
+}
+
+.StatusIndicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+}
+
+.StatusDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.StatusDot.active {
+    background-color: #4caf50;
+}
+
+.StatusDot.inactive {
+    background-color: #ff6f61;
+}
+
+.StatusDot.paused {
+    background-color: #ffca28;
+}
+
+.StatusText {
+    font-size: 0.8rem;
+    color: #8f8f8f;
+}
+
+.GamesList {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.GamesList li {
+    color: #8f8f8f;
+    margin: 5px 0;
 }

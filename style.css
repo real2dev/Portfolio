@@ -234,8 +234,8 @@ p {
     z-index: -1;
 }
 
-.scrolling-container::before,
-.scrolling-container::after {
+.scrolling-container::after,
+.scrolling-container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -245,11 +245,11 @@ p {
     z-index: 1;
 }
 
-.scrolling-container::before {
+.scrolling-container::after {
     left: 0;
 }
 
-.scrolling-container::after {
+.scrolling-container::before {
     right: 0;
 }
 

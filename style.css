@@ -229,7 +229,6 @@ p {
     overflow: hidden;
     width: 60%;
     height: 50px; /* Adjust as needed */
-    background-color: #000; /* Optional */
     display: flex;
     align-items: center;
     z-index: -1;

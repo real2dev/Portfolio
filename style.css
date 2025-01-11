@@ -227,7 +227,7 @@ p {
 .scrolling-container {
     position: relative;
     overflow: hidden;
-    width: 60%;
+    width: 700;
     height: 50px;
     display: flex;
     align-items: center;
@@ -239,7 +239,7 @@ p {
     content: '';
     position: absolute;
     top: 0;
-    width: 700; /* Adjust width of the fade areas */
+    width: 40%; /* Adjust width of the fade areas */
     height: 100%;
     z-index: 1;
 }

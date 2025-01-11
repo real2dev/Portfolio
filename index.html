@@ -1,18 +1,20 @@
 <html lang="en">
 <head>
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,632;1,14..32,632&display=swap');
-    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>realcrafted.net</title>
-    <meta name="description" content="hello, i'm real and this is my portfolio." />
+    <meta name="description" content="hello, I'm real and this is my portfolio." />
     <meta content="realcrafted.net" property="og:title" />
-    <meta content="hello, i'm real. welcome to my portfolio! click through to see more." property="og:description" />
+    <meta content="hello, I'm real. welcome to my portfolio! click through to see more." property="og:description" />
     <meta content="https://realcrafted.net" property="og:url" />
     <meta content="https://realcrafted.net/favicon.png" property="og:image" />
-    <meta content="#fcfcfc" data-react-helmet="true" name="theme-color" />
+    <meta content="#fcfcfc" name="theme-color" />
+
+    <title>realcrafted.net</title>
+    
+    <!-- Google Fonts Import -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,632;1,14..32,632&display=swap');
+    </style>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -21,102 +23,105 @@
    <div class="Main">
         <h1>Hello there! 👋</h1>
    </div>
-    <div id="particles-js"><canvas class="particles-js-canvas-el" width="1348" height="991" style="width: 100%; height: 100%;"></canvas></div>
-       
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    <script>
+
+   <!-- Particles.js background -->
+   <div id="particles-js">
+      <canvas class="particles-js-canvas-el" width="1348" height="991" style="width: 100%; height: 100%;"></canvas>
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+   <script>
         particlesJS("particles-js", {
             "particles": {
-            "number": {
-                "value": 90,
-                "density": {
-                "enable": false,
-                "value_area": 500
-                }
-            },
-            "color": {
-                "value": ["#FFFFFF"]
-            },
-            
-            "shape": {
-                "type": "circle",
-                "stroke": {
-                "width": 1,
-                "color": "#00000"
+                "number": {
+                    "value": 90,
+                    "density": {
+                        "enable": false,
+                        "value_area": 500
+                    }
                 },
-                "polygon": {
-                "nb_sides": 5
+                "color": {
+                    "value": "#FFFFFF"
                 },
-                "image": {
-                "src": "img/github.svg",
-                "width": 100,
-                "height": 100
+                "shape": {
+                    "type": "circle", 
+                    "stroke": {
+                        "width": 1,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.64,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 2.7,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1.3,
+                        "size_min": 0.2,
+                        "sync": true
+                    }
+                },
+                "line_linked": {
+                    "enable": false,
+                    "distance": 130,
+                    "color": "#ffffff",
+                    "opacity": 0.6,
+                    "width": 2
                 }
-            },
-            "opacity": {
-                "value": 0.64,
-                "random": true,
-                "anim": {
-                "enable": true,
-                "speed": 1,
-                "opacity_min": 0.1,
-                "sync": false
-                }
-            },
-            "size": {
-                "value": 2.7,
-                "random": true,
-                "anim": {
-                "enable": true,
-                "speed": 1.3,
-                "size_min": 0.2,
-                "sync": true
-                }
-            },
-            "line_linked": {
-                "enable": false,
-                "distance": 130,
-                "color": "#ffffff",
-                "opacity": 0.6,
-                "width": 2
-            },
             },
             "interactivity": {
-            "detect_on": "window",
-            "events": {
-                "onhover": {
-                "enable": true,
-                "mode": "grab"
+                "detect_on": "window",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    }
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 160,
+                        "line_linked": {
+                            "opacity": 0.8
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 150,
+                        "duration": 1.5
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
                 }
-            },
-            "modes": {
-                "grab": {
-                "distance": 160,
-                "line_linked": {
-                    "opacity": 0.8
-                }
-                },
-                "bubble": {
-                "distance": 400,
-                "size": 40,
-                "duration": 2,
-                "opacity": 8,
-                "speed": 3
-                },
-                "repulse": {
-                "distance": 150,
-                "duration": 1.5
-                },
-                "push": {
-                "particles_nb": 4
-                },
-                "remove": {
-                "particles_nb": 2
-                }
-            }
             },
             "retina_detect": true
         });
-    </script>
+   </script>
 </body>
 </html>

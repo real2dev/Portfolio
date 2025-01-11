@@ -31,7 +31,7 @@ body {
 h1 {
     font-size: 2.25rem;
     line-height: 2.5rem;
-    font-weight: 500;
+    font-weight: 650;
 }
 
 h2, h3 {
@@ -45,7 +45,7 @@ h2, h3 {
 p {
     color: #8f8f8f;
     display: block; /* Hide elements */
-    font-weight: 400;
+    font-weight: 550;
     max-width: 100%;
 }
 

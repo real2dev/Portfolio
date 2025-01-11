@@ -227,7 +227,7 @@ p {
 .scrolling-container {
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 60%;
     height: 50px; /* Adjust as needed */
     background-color: #000; /* Optional */
     display: flex;

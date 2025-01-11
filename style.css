@@ -239,7 +239,7 @@ p {
     content: '';
     position: absolute;
     top: 0;
-    width: 35%; /* Adjust width of the fade areas */
+    width: 700; /* Adjust width of the fade areas */
     height: 100%;
     z-index: 1;
 }
@@ -256,7 +256,7 @@ p {
 
 .scrolling-content {
     display: flex;
-    animation: scroll 16s linear infinite;
+    animation: scroll 22s linear infinite;
     z-index: 0;
 }
 

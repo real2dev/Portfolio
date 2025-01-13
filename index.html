@@ -28,8 +28,18 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            overflow: auto;
+            overflow: hidden;
         }
+
+        body {
+            overflow-y: scroll; /* Allows vertical scrolling without displaying the scrollbar */
+            -ms-overflow-style: none; /* For Internet Explorer and Edge */
+             scrollbar-width: none; /* For Firefox */
+        }
+
+        body::-webkit-scrollbar {
+            display: none; /* For Chrome, Safari, and Opera */
+         }
         .Main {
             z-index: 2;  /* Make sure content stays on top of particles */
             text-align: center;

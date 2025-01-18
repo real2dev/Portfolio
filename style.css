@@ -10,8 +10,6 @@ body {
     font-style: normal;
     color: white;
     margin: 0;
-    height: 100vh;
-    width: 100vw;
 }
 
 /* Particle background container */
@@ -54,6 +52,7 @@ p {
 /* Main content styling */
 .Main {
     padding: 7vh max(7vw, 20px);
+    max-width: 1200px;
     margin: 0 auto;
 }
 

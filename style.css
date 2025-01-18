@@ -21,7 +21,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Set particles to be below everything else */
+    z-index: -1; /* Set particles to be below everything else but above scrolling container */
 }
 
 /* Text selection */
@@ -34,30 +34,27 @@ h1 {
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 650;
-    text-align: center;
 }
 
 h2, h3 {
     font-size: 1.5rem;
     line-height: 2rem;
+    display: block; /* Hide elements */
     font-weight: 650;
-    text-align: center;
 }
 
 /* Paragraph text */
 p {
     color: #8f8f8f;
+    display: block; /* Hide elements */
     font-weight: 550;
     max-width: 70%;
-    margin: 0 auto;
-    line-height: 1.5;
 }
 
 /* Main content styling */
 .Main {
     padding: 7vh max(7vw, 20px);
     margin: 0 auto;
-    text-align: center;
 }
 
 /* Project Container */
@@ -71,7 +68,6 @@ p {
     font-family: "DM Mono", monospace;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     font-size: 1rem;
-    margin-bottom: 20px;
 }
 
 /* Button container styles */
@@ -128,12 +124,11 @@ p {
 
 /* Social row styling */
 .SocialRow {
+    padding-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
     gap: 10px;
-    padding: 10px 0;
 }
 
 /* Social icon styling */
@@ -146,10 +141,10 @@ p {
     text-decoration: none;
     color: #a3a3a3;
     font-family: "DM Mono", monospace;
-    display: inline-block;
+    display: block;
 }
 
-/* Responsive grid for jobs */
+/* Job container grid */
 .JobsGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -157,7 +152,7 @@ p {
     width: 100%;
 }
 
-/* Job container styling */
+/* Individual job container styling */
 .JobContainer {
     display: block;
     border-radius: 15px;
@@ -165,11 +160,23 @@ p {
     padding: 15px;
     color: #a3a3a3;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: fit-content;
 }
 
 .JobContainer:hover {
     transform: scale(1.02);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Role tag styling */
+.RoleTag {
+    display: inline-block;
+    background-color: #2d2d2d;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    color: #fcfcfc;
+    margin: 5px 0;
 }
 
 /* Status indicator container */
@@ -180,45 +187,101 @@ p {
     margin: 8px 0;
 }
 
-/* Scrolling container styles */
+/* Status dot styling */
+.StatusDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Different status dot states */
+.StatusDot.active {
+    background-color: #4caf50;
+}
+
+.StatusDot.inactive {
+    background-color: #ff6f61;
+}
+
+.StatusDot.paused {
+    background-color: #ffca28;
+}
+
+/* Status text styling */
+.StatusText {
+    font-size: 0.8rem;
+    color: #8f8f8f;
+}
+
+/* Game list styling */
+.GamesList {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.GamesList li {
+    color: #8f8f8f;
+    margin: 5px 0;
+}
+
 .scrolling-container {
-    overflow-x: auto;
-    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    width: 700;
+    height: 50px;
     display: flex;
-    gap: 10px;
-    padding: 20px;
-    margin: 0 auto;
+    align-items: center;
+    z-index: -2;
+}
+
+.scrolling-container::before,
+.scrolling-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 40%; /* Adjust width of the fade areas */
+    height: 100%;
+    z-index: 1;
+}
+
+.scrolling-container::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Fade from opaque to transparent on the left */
+}
+
+.scrolling-container::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Fade from opaque to transparent on the right */
 }
 
 .scrolling-content {
     display: flex;
-    gap: 20px;
+    animation: scroll 22s linear infinite;
+    z-index: 0;
 }
 
 .scroll-item {
-    display: inline-block;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    white-space: nowrap;
     color: white;
+    font-family: "Inter", sans-serif;
 }
 
 .scroll-item img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 5px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
 }
 
-/* Adjustments for small screens */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 1.8rem;
+/* Infinite scrolling animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
     }
-
-    p {
-        max-width: 90%;
-    }
-
-    .ProjectContainer {
-        padding: 10px 15px;
-        font-size: 0.9rem;
+    100% {
+        transform: translateX(-50%);
     }
 }

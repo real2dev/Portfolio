@@ -83,7 +83,7 @@ p {
 .scrolling-container {
     position: relative;
     overflow: hidden;
-    width: 700;
+    width: 40vw;
     height: 50px;
     display: flex;
     align-items: center;

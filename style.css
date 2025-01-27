@@ -51,6 +51,20 @@ p {
     max-width: 70%;
 }
 
+/* Button container styles */
+.MusicButton, .LanguageContainer, .SocialButton {
+    display: flex;
+    border-radius: 15px;
+    background-color: #171717;
+    padding: 0 13px;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #a3a3a3;
+    font-family: "DM Mono", monospace;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .SocialButton {
     height: 25px;
 }

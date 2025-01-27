@@ -5,12 +5,18 @@
 
 /* Body styling */
 body {
+    margin: 0;
+    padding: 0;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     background-color: #000000;
     font-family: "DM Mono", monospace;
     font-style: normal;
     color: white;
-    margin: 0;
-    height: 100vh;
     width: 100vw;
 }
 
@@ -65,13 +71,14 @@ p {
 
 /* Scrolling container */
 .scrolling-container {
-    max-width: 100%; /* Restrict the width to the viewport */
-    overflow-x: auto; /* Enable horizontal scrolling if necessary */
+    position: relative;
+    overflow: hidden;
+    width: 40vw;
+    height: 50px;
     display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    padding: 10px 5%;
-    box-sizing: border-box;
+    align-items: center;
+    z-index: -2;
+    margin: auto; /* Ensure it's centered */
 }
 
 /* Images in scroll */

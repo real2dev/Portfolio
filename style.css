@@ -13,3 +13,20 @@ body {
     height: 100vh;
     width: 100vw;
 }
+
+/* Scrolling container */
+.scrolling-container {
+    max-width: 100%; /* Restrict the width to the viewport */
+    overflow-x: auto; /* Enable horizontal scrolling if necessary */
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px 5%;
+    box-sizing: border-box;
+}
+
+/* Images in scroll */
+.scroll-item img {
+    max-width: 100%; /* Ensure images do not overflow */
+    height: auto;
+}

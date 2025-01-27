@@ -12,65 +12,17 @@
     <title>realcrafted</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico"> 
     
-    <!-- Google Font Import (Optional) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="style.css">
-    
-    <style>
-        /* Basic CSS to ensure particles background works and text is visible */
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        body {
-            overflow-y: scroll; /* Allows vertical scrolling without displaying the scrollbar */
-            -ms-overflow-style: none; /* For Internet Explorer and Edge */
-             scrollbar-width: none; /* For Firefox */
-        }
-
-        body::-webkit-scrollbar {
-            display: none; /* For Chrome, Safari, and Opera */
-         }
-        .Main {
-            z-index: 2;  /* Make sure content stays on top of particles */
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 3em;
-        }
-        p {
-            font-size: 1.2em;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        a {
-            color: #FF6347; /* Example color */
-            text-decoration: none;
-        }
-    </style>
 </head>
 
 <body>
    <div class="Main">
         <h1>hello! 👋</h1>
         <p>
-            i'm <a href="#" style="color: whitesmoke;">real</a>, a roblox scripter with ~5 years of experience. 
-            <br>
-            <br>
-            i've tried messing around with other languages, however lua has proven to be my favorite. i really enjoy working on all kinds of projects, and i don't usually do small commissions (<3k robux or $40 usd).<b></b>
-            <br>
-            <br>
-            if you want to reach out to me, use any of the communication methods linked below!
+           this portfolio isn't quite finished yet, come back later :)
         </p>
    </div>
 
@@ -91,7 +43,7 @@
 
     <div class="Separator" style="width: 100%; background-color: white;"></div>
 
-     <div class="scrolling-container">
+    <div class="scrolling-container">
     <div class="scrolling-content">
         <div class="scroll-item">
             <img src="https://static-00.iconduck.com/assets.00/lightning-bolt-icon-1512x2048-uqtpfmg8.png" alt="Icon 1">
@@ -168,17 +120,6 @@
 
    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
    <script>
-        // Adjust canvas size dynamically based on the viewport
-        window.addEventListener('resize', resizeCanvas);
-        function resizeCanvas() {
-            const canvas = document.querySelector('.particles-js-canvas-el');
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-
-        // Initial resize on page load
-        resizeCanvas();
-
         particlesJS("particles-js", {
             "particles": {
                 "number": {

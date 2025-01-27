@@ -14,6 +14,55 @@ body {
     width: 100vw;
 }
 
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Set particles to be below everything else but above scrolling container */
+}
+
+/* Header styles */
+h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 650;
+}
+
+h2, h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    display: block; /* Hide elements */
+    font-weight: 650;
+}
+
+/* Paragraph text */
+p {
+    color: #8f8f8f;
+    display: block; /* Hide elements */
+    font-weight: 550;
+    max-width: 70%;
+}
+
+.SocialButton {
+    height: 25px;
+}
+
+/* Social row styling */
+.SocialRow {
+    padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Social icon styling */
+.SocialIcon {
+    display: block;
+}
+
 /* Scrolling container */
 .scrolling-container {
     max-width: 100%; /* Restrict the width to the viewport */

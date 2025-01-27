@@ -79,3 +79,61 @@ p {
     max-width: 100%; /* Ensure images do not overflow */
     height: auto;
 }
+
+.scrolling-container {
+    position: relative;
+    overflow: hidden;
+    width: 700;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    z-index: -2;
+}
+.scrolling-container::before,
+.scrolling-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 40%; /* Adjust width of the fade areas */
+    height: 100%;
+    z-index: 1;
+}
+.scrolling-container::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Fade from opaque to transparent on the left */
+}
+.scrolling-container::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Fade from opaque to transparent on the right */
+}
+
+.scrolling-content {
+    display: flex;
+    animation: scroll 22s linear infinite;
+    z-index: 0;
+}
+
+.scroll-item {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    white-space: nowrap;
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+
+.scroll-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Infinite scrolling animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}

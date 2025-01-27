@@ -1,286 +1,69 @@
-/* General cursor styling */
-* {
-    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23FFFFFF" stroke-width="4" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), default;
+/* General styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Body styling */
 body {
-    background-color: #000000;
+    background-color: #000;
     font-family: "DM Mono", monospace;
-    font-style: normal;
     color: white;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Particle background container */
-#particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Set particles to be below everything else but above scrolling container */
-}
-
-/* Text selection */
-::-moz-selection, ::selection {
-    background-color: transparent;
-}
-
-/* Header styles */
-h1 {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-    font-weight: 650;
-}
-
-h2, h3 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    display: block; /* Hide elements */
-    font-weight: 650;
-}
-
-/* Paragraph text */
-p {
-    color: #8f8f8f;
-    display: block; /* Hide elements */
-    font-weight: 550;
-    max-width: 70%;
-}
-
-/* Main content styling */
+/* Main content */
 .Main {
-    padding: 7vh max(7vw, 20px);
+    padding: 7vh 5vw; /* Use percentage for responsiveness */
     max-width: 1200px;
+    width: 100%; /* Allow it to scale with the screen */
     margin: 0 auto;
 }
 
-/* Project Container */
+/* Project containers */
 .ProjectContainer {
-    display: block;
-    border-radius: 15px;
-    background-color: #171717;
-    padding: 8px 20px;
-    text-decoration: none;
-    color: #a3a3a3;
-    font-family: "DM Mono", monospace;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    font-size: 1rem;
+    max-width: 90%; /* Prevents content from exceeding screen width */
+    margin: 20px auto;
+    text-align: center;
 }
 
-/* Button container styles */
-.MusicButton, .LanguageContainer, .SocialButton {
+/* Social row */
+.SocialRow {
     display: flex;
-    border-radius: 15px;
-    background-color: #171717;
-    padding: 0 13px;
-    align-items: center;
-    gap: 5px;
-    text-decoration: none;
-    color: #a3a3a3;
-    font-family: "DM Mono", monospace;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.SocialButton {
-    height: 25px;
-}
-
-.MusicButton, .LanguageContainer {
-    height: 30px;
-    margin-bottom: 10px;
-}
-
-/* Hover effects */
-.MusicButton:hover, .LanguageContainer:hover, .SocialButton:hover, .ProjectContainer:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Separator with animation */
-.Separator {
-    height: 5px;
-    background: linear-gradient(90deg, #ff6f61, #ffca28, #4caf50, #2196f3, #9c27b0);
-    background-size: 300% 300%;
-    animation: SeperatorAnimation 16s ease infinite;
-    border: none;
-    border-radius: 10px;
+    flex-wrap: wrap; /* Allow items to wrap if the screen is too small */
+    justify-content: center; /* Center the content */
+    gap: 15px;
     margin: 20px 0;
 }
 
-@keyframes SeperatorAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* Social row styling */
-.SocialRow {
-    padding-bottom: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
-}
-
-/* Social icon styling */
-.SocialIcon {
-    display: block;
-}
-
-/* Links styling */
-.Link {
-    text-decoration: none;
-    color: #a3a3a3;
-    font-family: "DM Mono", monospace;
-    display: block;
-}
-
-/* Job container grid */
-.JobsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    width: 100%;
-}
-
-/* Individual job container styling */
-.JobContainer {
-    display: block;
-    border-radius: 15px;
-    background-color: #171717;
-    padding: 15px;
-    color: #a3a3a3;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: fit-content;
-}
-
-.JobContainer:hover {
-    transform: scale(1.02);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Role tag styling */
-.RoleTag {
-    display: inline-block;
-    background-color: #2d2d2d;
-    padding: 5px 10px;
-    border-radius: 12px;
-    font-size: 0.9rem;
-    color: #fcfcfc;
-    margin: 5px 0;
-}
-
-/* Status indicator container */
-.StatusIndicator {
+/* Social buttons */
+.SocialButton {
+    flex: 1 1 auto; /* Allow flexibility for smaller screens */
+    max-width: 300px; /* Prevent buttons from getting too large */
+    padding: 10px;
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin: 8px 0;
+    justify-content: center;
 }
 
-/* Status dot styling */
-.StatusDot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-/* Different status dot states */
-.StatusDot.active {
-    background-color: #4caf50;
-}
-
-.StatusDot.inactive {
-    background-color: #ff6f61;
-}
-
-.StatusDot.paused {
-    background-color: #ffca28;
-}
-
-/* Status text styling */
-.StatusText {
-    font-size: 0.8rem;
-    color: #8f8f8f;
-}
-
-/* Game list styling */
-.GamesList {
-    margin: 10px 0;
-    padding-left: 20px;
-}
-
-.GamesList li {
-    color: #8f8f8f;
-    margin: 5px 0;
-}
-
+/* Scrolling container */
 .scrolling-container {
-    position: relative;
-    overflow: hidden;
-    width: 700;
-    height: 50px;
+    max-width: 100%; /* Restrict the width to the viewport */
+    overflow-x: auto; /* Enable horizontal scrolling if necessary */
     display: flex;
-    align-items: center;
-    z-index: -2;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px 5%;
+    box-sizing: border-box;
 }
 
-.scrolling-container::before,
-.scrolling-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 40%; /* Adjust width of the fade areas */
-    height: 100%;
-    z-index: 1;
-}
-
-.scrolling-container::before {
-    left: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Fade from opaque to transparent on the left */
-}
-
-.scrolling-container::after {
-    right: 0;
-    background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Fade from opaque to transparent on the right */
-}
-
-.scrolling-content {
-    display: flex;
-    animation: scroll 22s linear infinite;
-    z-index: 0;
-}
-
-.scroll-item {
-    display: flex;
-    align-items: center;
-    margin-right: 30px;
-    white-space: nowrap;
-    color: white;
-    font-family: "Inter", sans-serif;
-}
-
+/* Images in scroll */
 .scroll-item img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-}
-
-/* Infinite scrolling animation */
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+    max-width: 100%; /* Ensure images do not overflow */
+    height: auto;
 }
